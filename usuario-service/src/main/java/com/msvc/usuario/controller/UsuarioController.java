@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.msvc.usuario.entity.Usuario;
+import com.msvc.usuario.entities.Usuario;
 import com.msvc.usuario.service.UsuarioService;
 
 @RestController

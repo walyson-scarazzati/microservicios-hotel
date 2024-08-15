@@ -2,7 +2,7 @@ package com.msvc.usuario.service;
 
 import java.util.List;
 
-import com.msvc.usuario.entity.Usuario;
+import com.msvc.usuario.entities.Usuario;
 
 public interface UsuarioService {
 	
