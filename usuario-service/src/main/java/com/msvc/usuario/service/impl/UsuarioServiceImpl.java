@@ -16,6 +16,7 @@ import com.msvc.usuario.entities.Calificacion;
 import com.msvc.usuario.entities.Hotel;
 import com.msvc.usuario.entities.Usuario;
 import com.msvc.usuario.exceptions.ResourceNotFoundException;
+import com.msvc.usuario.external.services.HotelService;
 import com.msvc.usuario.repository.UsuarioRepository;
 import com.msvc.usuario.service.UsuarioService;
 
@@ -29,6 +30,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 	
     @Autowired
     private UsuarioRepository usuarioRepository;
+    
+    @Autowired
+    private HotelService hotelService;
 
     @Override
     public Usuario saveUsuario(Usuario usuario) {
@@ -54,9 +58,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 
          List<Calificacion> listaCalificaciones = calificaciones.stream().map(calificacion -> {
              System.out.println(calificacion.getHotelId());
-             ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://HOTEL-SERVICE/hoteles/"+calificacion.getHotelId(),Hotel.class);
+             //ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://HOTEL-SERVICE/hoteles/"+calificacion.getHotelId(),Hotel.class);
 
-             Hotel hotel = forEntity.getBody();
+             Hotel hotel = hotelService.getHotel(calificacion.getHotelId());
 
              calificacion.setHotel(hotel);
 
