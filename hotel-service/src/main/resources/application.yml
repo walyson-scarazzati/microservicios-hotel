@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: HOTEL-SERVICE
+  config:
+    import: configserver:http://localhost:8085
   datasource:
     url: jdbc:postgresql://localhost:5432/microservicios?createDatabaseIfNotExist=true
     username: cami
@@ -17,8 +19,3 @@ spring:
       hibernate.format_sql: true
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-    
-  config:
-    import: configserver:http://localhost:8085
-  profiles:
-    active: prod
