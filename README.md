@@ -1,4 +1,5 @@
 **First project from Curso de microservicios con Spring Boot y Spring Cloud - La Tecnología Avanza - Udemy**
+https://www.udemy.com/course/curso-de-microservicios-con-spring-boot-y-spring-cloud
 
 ![image](https://github.com/user-attachments/assets/6c3d220c-f2f4-4574-bf10-1afbde539821)
 
@@ -8,13 +9,29 @@
 
 ![image](https://github.com/user-attachments/assets/31e168b2-f977-45da-bcc6-b8e65ca11ce2)
 
+<h1>Technologies</h1>
+<ul>
+  <li>Spring Boot</li>
+  <li>Microservices</li>
+  <li>RestTemplate</li>
+  <li>OpenFeign</li>
+  <li>Load Balancer</li>
+  <li>Eureka Server and Client</li>
+  <li>Spring Config Server</li>
+  <li>Circuit Breaker with Resilience4j</li>
+  <li>API Gateway</li>
+  <li>JWT for authentication</li>
+  <li>Database Postgres,MySQL, Mongo</li>
+</ul>
 
 <h1>Running the Services</h1>
-Start the Registry Service: Run the RegistryServiceApplication.
-Start the API Gateway: Run the ApiGatewayApplication.
-Start the Config Server: Run the ConfigServerApplication.
-Start the Auth Service: Run the AuthServiceApplication.
-Start Calificacion, Hotel, and Usuario Services: Run each service's main application class.
+<ul>
+  <li>Start the Registry Service: Run the RegistryServiceApplication.</li>
+  <li>Start the API Gateway: Run the ApiGatewayApplication.</li>
+  <li>Start the Config Server: Run the ConfigServerApplication.</li>
+  <li>Start the Auth Service: Run the AuthServiceApplication.</li>
+  <li>Start Calificacion, Hotel, and Usuario Services: Run each service's main application class.</li>
+</ul>
 
 ![image](https://github.com/user-attachments/assets/3977ad36-c1b9-459a-a605-5865c564af64)
 
