@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "35aed030-e70d-48bf-92dd-3dfa52511b90",
+		"name": "Curso de microservicios con Spring Boot y Spring Cloud - Udemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19833026"
+	},
+	"item": [
+		{
+			"name": "usuario-service",
+			"item": [
+				{
+					"name": "Guardar usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Cristian\",\r\n    \"email\": \"c1@gmail.com\",\r\n    \"informacion\": \"Usuario Cristians\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/usuarios/a0f844d9-4905-4205-a13a-18f948627cbe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios",
+								"a0f844d9-4905-4205-a13a-18f948627cbe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hotel-service",
+			"item": [
+				{
+					"name": "Guardar Hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"hotel01\",\r\n    \"ubicacion\": \"ubicacion01\",\r\n    \"informacion\": \"informacion01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar hoteles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/hoteles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"hoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Lista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/hoteles/465a487e-8313-49c6-b6b4-130f93b82b96",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"hoteles",
+								"465a487e-8313-49c6-b6b4-130f93b82b96"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "calificacion-service",
+			"item": [
+				{
+					"name": "Guardar calificacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\": \"300fa5e6-95db-4e46-b64e-1fc6ed814d7d\",\r\n    \"hotelId\": \"ee44918d-8336-459c-bb24-7e22e29147ee\",\r\n    \"calificacion\": \"8\",\r\n    \"observaciones\": \"Falta mas ventanas\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/calificaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"calificaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista calificaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/calificaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"calificaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter calificaciones de un usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/calificaciones/usuarios/300fa5e6-95db-4e46-b64e-1fc6ed814d7d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"calificaciones",
+								"usuarios",
+								"300fa5e6-95db-4e46-b64e-1fc6ed814d7d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter calificaciones de un hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/calificaciones/hoteles/465a487e-8313-49c6-b6b4-130f93b82b96",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"calificaciones",
+								"hoteles",
+								"465a487e-8313-49c6-b6b4-130f93b82b96"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth-service",
+			"item": [
+				{
+					"name": "Crear Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Cristian\",\r\n    \"password\": \"root\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/auth/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"auth",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hacer Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Cristian\",\r\n    \"password\": \"root\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hacer validacion token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uri\": \"http://localhost:8084/usuarios\",\r\n    \"method\": \"GET\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/auth/validate?token=eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6Miwic3ViIjoiY3Jpc3RpYW4iLCJpYXQiOjE3MjQ4MzMzNDQsImV4cCI6MTcyNDgzNjk0NH0.3nogwGQC1_Lz9PpC8s3Wgmt87DXJ9S1e6UZtiA0AzRJ5FN0RMWTdXeMp98hbfeEvye-XijcY_g3hBXDk4UEpcQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"auth",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6Miwic3ViIjoiY3Jpc3RpYW4iLCJpYXQiOjE3MjQ4MzMzNDQsImV4cCI6MTcyNDgzNjk0NH0.3nogwGQC1_Lz9PpC8s3Wgmt87DXJ9S1e6UZtiA0AzRJ5FN0RMWTdXeMp98hbfeEvye-XijcY_g3hBXDk4UEpcQ"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Gateway ejemplo usuariobyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/usuarios/300fa5e6-95db-4e46-b64e-1fc6ed814d7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"usuarios",
+						"300fa5e6-95db-4e46-b64e-1fc6ed814d7d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Gateway ejemplo usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpZCI6MSwic3ViIjoiQ3Jpc3RpYW4iLCJpYXQiOjE3MjQ3OTgxNTMsImV4cCI6MTcyNDgwMTc1M30.7GZInFyCBhu0Uw1K4xBuQA8HJy1DVMc5ZoSmVnywdx3gwAoUJjRV7beryRqWTk2_MY0RVOoMzBpKthFeaHH_ow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resquest application config github",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/application/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"application",
+						"default"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
