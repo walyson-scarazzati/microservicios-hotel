@@ -1,6 +1,12 @@
-First project from Curso de microservicios con Spring Boot y Spring Cloud - La Tecnología Avanza - Udemy
+**First project from Curso de microservicios con Spring Boot y Spring Cloud - La Tecnología Avanza - Udemy**
 
 ![image](https://github.com/user-attachments/assets/6c3d220c-f2f4-4574-bf10-1afbde539821)
+
+<h1>Running docker container</h1>
+
+-  Run docker ```docker-compose up -d``` to create mysql 8.0, postgres, mongodb
+
+![image](https://github.com/user-attachments/assets/31e168b2-f977-45da-bcc6-b8e65ca11ce2)
 
 
 <h1>Running the Services</h1>
