@@ -21,6 +21,7 @@ https://www.udemy.com/course/curso-de-microservicios-con-spring-boot-y-spring-cl
   <li>Circuit Breaker with Resilience4j</li>
   <li>API Gateway</li>
   <li>JWT for authentication</li>
+  <li>Database Postgres,MySQL, Mongo</li>
 </ul>
 
 <h1>Running the Services</h1>
